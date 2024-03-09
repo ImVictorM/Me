@@ -1,0 +1,1 @@
+export const HERO_CONTENT = "I am a developer based in Brazil. With a passion for crafting digital experiences, I specialize in bringing creative ideas to life on the web.";
