@@ -1,7 +1,9 @@
+import { LandingPage } from "@/layouts";
+
 export default function MainLandingPage() {
   return (
-    <main>
+    <LandingPage>
       <h1>Main page</h1>
-    </main>
+    </LandingPage>
   );
 }
