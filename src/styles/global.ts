@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 import fonts from "./font.module.css";
 
 export const GlobalStyles = createGlobalStyle`
@@ -11,9 +11,6 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
-html {
-  font-size: 100%;
-}
 
 body {
   margin: 0;
@@ -22,7 +19,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: ${({ theme }) => theme.fonts.monofonto}, sans-serif;
-  font-size: 1rem;
+  font-size: calc(15px + 0.390625vw);
   color: ${({ theme }) => theme.colors.jetStream};
   background-color: ${({ theme }) => theme.colors.chineseBlack};
   line-height: 1;
@@ -95,4 +92,4 @@ select {
     scroll-behavior: auto !important;
   }
 }
-`
+`;

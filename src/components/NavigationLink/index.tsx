@@ -5,8 +5,8 @@ import styled, { css } from "styled-components";
 const StyledNavigationLink = styled.a<{ isActive: boolean }>`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.electricGreen};
-  padding: 0 1rem;
-  font-size: 2.5rem;
+  padding: 0 0.5em;
+
   border-bottom: 4px solid ${({ theme }) => theme.colors.electricGreen};
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ const StyledNavigationLink = styled.a<{ isActive: boolean }>`
     css`
       align-self: flex-end;
       padding: 0;
-      height: 55px;
+      height: 65%;
       flex-direction: row;
       border-bottom: none;
 
@@ -60,7 +60,7 @@ export default function NavigationLink({
     if (!hash) {
       setIsActive(defaultActive || false);
     } else {
-      setIsActive(hash.includes(to));
+      setIsActive(to.includes(hash));
     }
   }, [hash]);
 
