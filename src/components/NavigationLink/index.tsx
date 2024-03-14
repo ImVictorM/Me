@@ -7,7 +7,8 @@ const StyledNavigationLink = styled.a<{ isActive: boolean }>`
   color: ${({ theme }) => theme.colors.electricGreen};
   padding: 0 0.5em;
 
-  border-bottom: 4px solid ${({ theme }) => theme.colors.electricGreen};
+  border-bottom: var(--horizontal-header-line-width) solid
+    ${({ theme }) => theme.colors.electricGreen};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,17 +22,24 @@ const StyledNavigationLink = styled.a<{ isActive: boolean }>`
       flex-direction: row;
       border-bottom: none;
 
-      div:first-child {
-        border-left: 4px solid ${({ theme }) => theme.colors.electricGreen};
-        border-top: 4px solid ${({ theme }) => theme.colors.electricGreen};
-        width: 1rem;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        border-top: var(--horizontal-header-line-width) solid
+          ${({ theme }) => theme.colors.electricGreen};
+        width: 12px;
+      }
+
+      &::before {
+        border-left: var(--horizontal-header-line-width) solid
+          ${({ theme }) => theme.colors.electricGreen};
         margin-right: 5px;
       }
 
-      div:last-child {
-        border-top: 4px solid ${({ theme }) => theme.colors.electricGreen};
-        width: 1rem;
-        border-right: 4px solid ${({ theme }) => theme.colors.electricGreen};
+      &::after {
+        border-right: var(--horizontal-header-line-width) solid
+          ${({ theme }) => theme.colors.electricGreen};
         margin-left: 5px;
       }
 
@@ -66,9 +74,7 @@ export default function NavigationLink({
 
   return (
     <StyledNavigationLink href={to} isActive={isActive}>
-      <div />
       <span>{text}</span>
-      <div />
     </StyledNavigationLink>
   );
 }

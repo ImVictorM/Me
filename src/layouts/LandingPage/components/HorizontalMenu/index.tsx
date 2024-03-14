@@ -1,5 +1,4 @@
 import { NavigationLink, ResumeLink } from "@/components";
-import { device } from "@/styles/breakpoints";
 import styled from "styled-components";
 import { content } from "@/utils";
 
@@ -7,17 +6,13 @@ const StyledHeader = styled.header`
   margin-top: 2em;
   display: flex;
   width: 100%;
-  height: 78px;
-  font-size: 2rem;
-
-  @media (${device.md}) {
-    font-size: 1.5rem;
-    height: 60px;
-  }
+  height: 55px;
+  font-size: 1.5rem;
 `;
 
 const HeaderLine = styled.div`
-  border-bottom: 4px solid ${({ theme }) => theme.colors.electricGreen};
+  border-bottom: var(--horizontal-header-line-width) solid
+    ${({ theme }) => theme.colors.electricGreen};
   flex-grow: 1;
   height: auto;
 `;
@@ -27,6 +22,7 @@ const StyledNav = styled.nav`
   display: flex;
 
   & .resume-link-wrapper {
+    font-size: 1.7rem;
     background-color: ${({ theme }) => theme.colors.chineseBlack};
     margin-left: 1em;
     align-self: flex-end;

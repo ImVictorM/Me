@@ -1,8 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 import fonts from "./font.module.css";
+import variables from "./variables";
 
 export const GlobalStyles = createGlobalStyle`
  ${fonts} // this works as a normal styled css
+ ${variables}
 
 /* Box sizing rules */
 *,
