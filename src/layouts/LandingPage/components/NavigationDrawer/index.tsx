@@ -92,7 +92,7 @@ const StyledSidebar = styled.aside<{ menuOpen: boolean }>`
   background-color: #111f11;
   box-shadow: -10px 0px 30px -15px #012901;
   transform: translateX(${({ menuOpen }) => (menuOpen ? 0 : 100)}vw);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: var(--chiang-transition);
 `;
 
 const StyledNavigation = styled.nav`
