@@ -3,10 +3,18 @@ import { theme } from "@/styles/theme";
 import styled, { ThemeProvider } from "styled-components";
 import { Footer, HorizontalMenu, NavigationDrawer } from "./components";
 import { useWindowDimensions } from "@/hooks";
-import { size } from "@/styles/breakpoints";
+import { size, device } from "@/styles/breakpoints";
 
 const StyledLayout = styled.div`
   padding: 0 2em;
+
+  @media ${device.sm} {
+    padding: 0 1.5em;
+  }
+
+  @media ${device.xs} {
+    padding: 0 1em;
+  }
 `;
 
 const StyledContainer = styled.div`

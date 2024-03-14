@@ -7,8 +7,12 @@ export default {
   Beyond coding, you can find me playing games, lifting weights or just enjoying the pleasure of standing on the ground just breathing and listening to a podcast.
   `,
 
-  hero: `"I am a developer based in Brazil. With a passion for crafting digital experiences, I specialize in bringing creative ideas to life on the web.";`,
-  email: "victorutdsim7@gmail.com",
+  hero: `I am a developer based in Brazil. With a passion for crafting digital experiences, I specialize in bringing creative ideas to life on the web.`,
+  social: {
+    email: "victorutdsim7@gmail.com",
+    github: "https://github.com/ImVictorM",
+    linkedin: "https://www.linkedin.com/in/victor-figueiredo-mendes/",
+  },
   navigationLinks: [
     {
       name: "HOME",

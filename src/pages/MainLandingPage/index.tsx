@@ -1,9 +1,10 @@
 import { LandingPage } from "@/layouts";
+import { Home } from "./components";
 
 export default function MainLandingPage() {
   return (
     <LandingPage>
-      <h1>Main page</h1>
+      <Home />
     </LandingPage>
   );
 }
