@@ -3,7 +3,7 @@ import fonts from "./font.module.css";
 import variables from "./variables";
 
 export const GlobalStyles = createGlobalStyle`
- ${fonts} // this works as a normal styled css
+ ${fonts}
  ${variables}
 
 /* Box sizing rules */
@@ -25,6 +25,16 @@ body {
   color: ${({ theme }) => theme.colors.jetStream};
   background-color: ${({ theme }) => theme.colors.chineseBlack};
   line-height: 1;
+
+  &.blur {
+    overflow: hidden;
+    #content > * {
+      filter: blur(5px) brightness(0.7);
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      pointer-events: none;
+      user-select: none;
+    }
+  }
 }
 h1,
 h2,
@@ -48,7 +58,7 @@ button {
   padding: 0;
   cursor: pointer;
 }
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+/* Remove list styles on ul, ol elements */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
@@ -79,6 +89,7 @@ textarea,
 select {
   font: inherit;
 }
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {

@@ -80,6 +80,7 @@ const StyledHamburgerButton = styled.button<{ menuOpen: boolean }>`
 `;
 
 const StyledSidebar = styled.aside<{ menuOpen: boolean }>`
+  z-index: 9;
   display: flex;
   position: fixed;
   top: 0;
@@ -140,7 +141,11 @@ const StyledSevenIcon = styled.span`
 
 export default function NavigationDrawer() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  function toggleMenu() {
+    setMenuOpen(!menuOpen);
+    document.body.classList.toggle("blur");
+  }
 
   return (
     <StyledNavigationDrawer>
@@ -153,8 +158,10 @@ export default function NavigationDrawer() {
         <StyledNavigation>
           <StyledLinkList>
             {content.navigationLinks.map((link) => (
-              <li>
-                <Link to={link.url}>{link.name}</Link>
+              <li key={link.url}>
+                <Link to={link.url} onClick={toggleMenu}>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </StyledLinkList>

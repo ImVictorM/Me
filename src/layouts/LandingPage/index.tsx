@@ -41,9 +41,7 @@ export default function LandingPage({ children }: LayoutProps) {
           ) : (
             <NavigationDrawer />
           )}
-
-          {children}
-
+          <div id="content">{children}</div>
           <Footer />
         </StyledContainer>
       </ThemeProvider>
