@@ -11,14 +11,15 @@ const StyledNavigationLink = styled.a<{ isActive: boolean }>`
     ${({ theme }) => theme.colors.electricGreen};
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 0.4em;
 
   ${({ isActive }) =>
     isActive &&
     css`
       align-self: flex-end;
       padding: 0;
-      height: 65%;
+      height: 30px;
       flex-direction: row;
       border-bottom: none;
 

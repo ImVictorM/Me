@@ -1,14 +1,7 @@
 import { NavigationLink, ResumeLink } from "@/components";
 import styled from "styled-components";
 import { content } from "@/utils";
-
-const StyledHeader = styled.header`
-  margin-top: 2em;
-  display: flex;
-  width: 100%;
-  height: 55px;
-  font-size: 1.5rem;
-`;
+import HeaderWrapper from "@/components/HeaderWrapper";
 
 const HeaderLine = styled.div`
   border-bottom: var(--horizontal-header-line-width) solid
@@ -31,7 +24,7 @@ const StyledNav = styled.nav`
 
 export default function HorizontalMenu() {
   return (
-    <StyledHeader>
+    <HeaderWrapper>
       <HeaderLine />
 
       <StyledNav>
@@ -47,6 +40,6 @@ export default function HorizontalMenu() {
           <ResumeLink />
         </div>
       </StyledNav>
-    </StyledHeader>
+    </HeaderWrapper>
   );
 }

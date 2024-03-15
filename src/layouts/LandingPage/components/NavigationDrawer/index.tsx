@@ -1,15 +1,9 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { content } from "@/utils";
 import { Link } from "react-router-dom";
 import { ResumeLink } from "@/components";
-
-const StyledNavigationDrawer = styled.div`
-  margin-top: 1.5em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+import HeaderWrapper from "@/components/HeaderWrapper";
 
 const StyledHamburgerButton = styled.button<{ menuOpen: boolean }>`
   display: flex;
@@ -80,7 +74,6 @@ const StyledHamburgerButton = styled.button<{ menuOpen: boolean }>`
 `;
 
 const StyledSidebar = styled.aside<{ menuOpen: boolean }>`
-  z-index: 9;
   display: flex;
   position: fixed;
   top: 0;
@@ -90,7 +83,7 @@ const StyledSidebar = styled.aside<{ menuOpen: boolean }>`
   width: min(80vw, 400px);
   height: 100vh;
   background-color: #111f11;
-  box-shadow: -10px 0px 30px -15px #012901;
+  box-shadow: -10px 0px 30px -15px var(--shadow-green-smooth);
   transform: translateX(${({ menuOpen }) => (menuOpen ? 0 : 100)}vw);
   transition: var(--chiang-transition);
 `;
@@ -134,7 +127,6 @@ const StyledLinkList = styled.ul`
 
 const StyledSevenIcon = styled.span`
   color: ${({ theme }) => theme.colors.electricGreen};
-  height: 100%;
   font-size: 1.9rem;
   cursor: pointer;
 `;
@@ -147,8 +139,14 @@ export default function NavigationDrawer() {
     document.body.classList.toggle("blur");
   }
 
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove("blur");
+    };
+  }, []);
+
   return (
-    <StyledNavigationDrawer>
+    <HeaderWrapper>
       <StyledSevenIcon>7</StyledSevenIcon>
       <StyledHamburgerButton onClick={toggleMenu} menuOpen={menuOpen}>
         <div className="hamburger-bar" />
@@ -169,6 +167,6 @@ export default function NavigationDrawer() {
           <ResumeLink />
         </StyledNavigation>
       </StyledSidebar>
-    </StyledNavigationDrawer>
+    </HeaderWrapper>
   );
 }
