@@ -4,7 +4,7 @@ import { content } from "@/utils";
 import HeaderWrapper from "@/components/HeaderWrapper";
 
 const HeaderLine = styled.div`
-  border-bottom: var(--horizontal-header-line-width) solid
+  border-bottom: var(--line-width) solid
     ${({ theme }) => theme.colors.electricGreen};
   flex-grow: 1;
   height: auto;

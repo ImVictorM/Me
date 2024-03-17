@@ -1,10 +1,12 @@
 import { LandingPage } from "@/layouts";
-import { Home } from "./components";
+import { About, Home } from "./components";
 
 export default function MainLandingPage() {
   return (
     <LandingPage>
       <Home />
+
+      <About />
     </LandingPage>
   );
 }

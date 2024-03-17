@@ -7,7 +7,7 @@ const StyledNavigationLink = styled.a<{ isActive: boolean }>`
   color: ${({ theme }) => theme.colors.electricGreen};
   padding: 0 0.5em;
 
-  border-bottom: var(--horizontal-header-line-width) solid
+  border-bottom: var(--line-width) solid
     ${({ theme }) => theme.colors.electricGreen};
   display: flex;
   flex-direction: column;
@@ -27,19 +27,19 @@ const StyledNavigationLink = styled.a<{ isActive: boolean }>`
       &::after {
         content: "";
         display: block;
-        border-top: var(--horizontal-header-line-width) solid
+        border-top: var(--line-width) solid
           ${({ theme }) => theme.colors.electricGreen};
         width: 12px;
       }
 
       &::before {
-        border-left: var(--horizontal-header-line-width) solid
+        border-left: var(--line-width) solid
           ${({ theme }) => theme.colors.electricGreen};
         margin-right: 5px;
       }
 
       &::after {
-        border-right: var(--horizontal-header-line-width) solid
+        border-right: var(--line-width) solid
           ${({ theme }) => theme.colors.electricGreen};
         margin-left: 5px;
       }
