@@ -5,12 +5,14 @@ import { device, size } from "@/styles/breakpoints";
 import { useWindowDimensions } from "@/hooks";
 
 const StyledHomeContainer = styled.section`
-  margin: 10vh auto 0;
+  margin: auto 0;
   width: 100%;
   gap: 1em;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100vh;
+  min-height: 100vh;
 
   @media ${device.lg} {
     justify-content: space-between;
