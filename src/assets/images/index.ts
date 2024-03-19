@@ -1,0 +1,10 @@
+export { default as blogsApi } from "./blogs-api.jpg";
+export { default as donaBirita } from "./dona-birita.png";
+export { default as glowStation } from "./glow-station.png";
+export { default as recipesApp } from "./recipes-app.png";
+export { default as solarSystem } from "./solar-system.png";
+export { default as swiftLearner } from "./swift-learner.svg";
+export { default as tfc } from "./tfc.png";
+export { default as trivia } from "./trivia.png";
+export { default as tryunfo } from "./tryunfo.png";
+export { default as vaultMeThumbsUp } from "./vault-me-thumbs-up.svg";
