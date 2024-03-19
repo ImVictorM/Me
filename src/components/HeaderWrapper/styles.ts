@@ -10,6 +10,7 @@ export const StyledHeader = styled.header<{
   top: 0;
   right: 0;
   left: 0;
+  margin: 0 auto;
   max-width: 1600px;
   padding: 0 1.5em;
   backdrop-filter: blur(10px);

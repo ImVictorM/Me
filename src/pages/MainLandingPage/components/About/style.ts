@@ -1,12 +1,7 @@
 import { device } from "@/styles/breakpoints";
 import styled from "styled-components";
 
-export const StyledAboutSection = styled.section`
-  margin-bottom: 2em;
-`;
-
 export const StyledAboutInfo = styled.div`
-  margin: 2em 0;
   display: flex;
   align-items: center;
 

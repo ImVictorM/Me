@@ -1,13 +1,11 @@
-import { SectionTitle } from "@/components";
+import { Section } from "@/components";
 import { content } from "@/utils";
-import { swiftLearner } from "@/assets";
-import { StyledAboutInfo, StyledAboutSection } from "./style";
+import { swiftLearner } from "@/assets/images";
+import { StyledAboutInfo } from "./style";
 
 export default function About() {
   return (
-    <StyledAboutSection>
-      <SectionTitle>ABOUT ME</SectionTitle>
-
+    <Section title="ABOUT ME">
       <StyledAboutInfo>
         <img
           src={swiftLearner}
@@ -21,6 +19,6 @@ export default function About() {
           <p>{content.about}</p>
         </div>
       </StyledAboutInfo>
-    </StyledAboutSection>
+    </Section>
   );
 }

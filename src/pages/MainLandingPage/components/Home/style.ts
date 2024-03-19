@@ -112,7 +112,6 @@ export const StyledHeroPresentation = styled.div`
 export const StyledHeroText = styled.p`
   width: 100%;
   font-size: 1.5rem;
-  opacity: 0.5;
   margin-bottom: 1em;
   max-width: 500px;
 

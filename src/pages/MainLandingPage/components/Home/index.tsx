@@ -1,4 +1,5 @@
-import { vaultMeThumbsUp, linkedinIcon, githubIcon, emailIcon } from "@/assets";
+import { linkedinIcon, githubIcon, emailIcon } from "@/assets/icons";
+import { vaultMeThumbsUp } from "@/assets/images";
 import { content } from "@/utils";
 import { size } from "@/styles/breakpoints";
 import { useWindowDimensions } from "@/hooks";
