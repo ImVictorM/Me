@@ -1,5 +1,5 @@
 import { LandingPage } from "@/layouts";
-import { About, Home, Projects } from "./components";
+import { About, Contact, Home, Projects } from "./components";
 
 export default function MainLandingPage() {
   return (
@@ -7,6 +7,7 @@ export default function MainLandingPage() {
       <Home />
       <About />
       <Projects />
+      <Contact />
     </LandingPage>
   );
 }
