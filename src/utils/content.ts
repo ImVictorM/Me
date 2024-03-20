@@ -65,7 +65,7 @@ export default {
       mainTechs: ["React", "Express", "Sequelize"],
     },
     {
-      title: "Trybe Footbal Club (TFC)",
+      title: "Trybe Footbal Club",
       description:
         "Informative website about football matches and classifications.",
       githubUrl: "https://github.com/ImVictorM/Trybe-Football-Club",

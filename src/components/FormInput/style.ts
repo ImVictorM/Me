@@ -1,3 +1,4 @@
+import { device } from "@/styles/breakpoints";
 import styled from "styled-components";
 
 export const StyledFormInput = styled.div`
@@ -10,6 +11,10 @@ export const StyledFormInput = styled.div`
     font-size: 1.5rem;
     margin-bottom: 0.1em;
     opacity: 0.5;
+
+    @media ${device.sm} {
+      font-size: 1rem;
+    }
   }
 
   input {
@@ -24,6 +29,10 @@ export const StyledFormInput = styled.div`
     border-bottom: 2px solid ${({ theme }) => theme.colors.electricGreen + "50"};
     transition: border 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     caret-color: ${({ theme }) => theme.colors.jetStream};
+
+    @media ${device.sm} {
+      font-size: 1.2rem;
+    }
 
     &::placeholder {
       color: ${({ theme }) => theme.colors.jetStream + "70"};

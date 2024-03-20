@@ -1,5 +1,9 @@
-import { FormInput, FormTextArea, Section } from "@/components";
-import { StyledContactPresentation, StyledInputsWrapper } from "./style";
+import { ButtonGreen, FormInput, FormTextArea, Section } from "@/components";
+import {
+  StyledButtonWrapper,
+  StyledContactPresentation,
+  StyledInputsWrapper,
+} from "./style";
 import { useState } from "react";
 
 export default function Contact() {
@@ -64,6 +68,10 @@ export default function Contact() {
           />
         </div>
       </StyledInputsWrapper>
+
+      <StyledButtonWrapper>
+        <ButtonGreen>SEND</ButtonGreen>
+      </StyledButtonWrapper>
     </Section>
   );
 }

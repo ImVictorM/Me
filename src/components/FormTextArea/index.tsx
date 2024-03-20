@@ -22,15 +22,13 @@ export default function FormTextArea({
   }, [defaultTextAreaProps.value]);
 
   return (
-    <StyledFormTextArea>
+    <StyledFormTextArea showCharactersCount={defaultTextAreaProps.value !== ""}>
       <label htmlFor={defaultTextAreaProps.id}>{label}</label>
       <textarea id={defaultTextAreaProps.id} {...defaultTextAreaProps} />
 
-      {defaultTextAreaProps.value !== "" && (
-        <span className="characters-count">
-          {charactersCount} characters left.
-        </span>
-      )}
+      <span className="characters-count">
+        {charactersCount} characters left.
+      </span>
     </StyledFormTextArea>
   );
 }

@@ -5,3 +5,4 @@ export { default as HeaderWrapper } from "./HeaderWrapper";
 export { default as Section } from "./Section";
 export { default as FormInput } from "./FormInput";
 export { default as FormTextArea } from "./FormTextArea";
+export { default as ButtonGreen } from "./ButtonGreen";

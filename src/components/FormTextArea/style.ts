@@ -1,15 +1,21 @@
+import { device } from "@/styles/breakpoints";
 import styled from "styled-components";
 
-export const StyledFormTextArea = styled.div`
+export const StyledFormTextArea = styled.div<{ showCharactersCount: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  position: relative;
 
   label {
     font-size: 1.5rem;
     margin-bottom: 0.1em;
     opacity: 0.5;
+
+    @media ${device.sm} {
+      font-size: 1rem;
+    }
   }
 
   textarea {
@@ -25,6 +31,10 @@ export const StyledFormTextArea = styled.div`
     transition: border 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     caret-color: ${({ theme }) => theme.colors.jetStream};
 
+    @media ${device.sm} {
+      font-size: 1.2rem;
+    }
+
     &::placeholder {
       color: ${({ theme }) => theme.colors.jetStream + "70"};
     }
@@ -38,5 +48,7 @@ export const StyledFormTextArea = styled.div`
     align-self: flex-end;
     margin-top: 0.3em;
     opacity: 0.2;
+    visibility: ${({ showCharactersCount }) =>
+      showCharactersCount ? "show" : "hidden"};
   }
 `;
