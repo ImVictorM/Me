@@ -9,8 +9,9 @@ export default function HorizontalMenu() {
       <HeaderLine />
 
       <StyledNav>
-        {content.navigationLinks.map((link) => (
+        {content.navigationLinks.map((link, index) => (
           <NavigationLink
+            key={index.toString() + link.url}
             defaultActive={link.name === "HOME"}
             text={link.name}
             to={link.url}

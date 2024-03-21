@@ -8,7 +8,7 @@ type HeaderWrapperProps = {
 export default function HeaderWrapper({ children }: HeaderWrapperProps) {
   const { scrollDirection, scrollY } = useScrollDirection();
   return (
-    <StyledHeader scrollDirection={scrollDirection} scrollY={scrollY}>
+    <StyledHeader $scrollDirection={scrollDirection} $scrollY={scrollY}>
       {children}
     </StyledHeader>
   );

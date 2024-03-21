@@ -1,7 +1,7 @@
 import { device } from "@/styles/breakpoints";
 import styled from "styled-components";
 
-export const StyledFormTextArea = styled.div<{ showCharactersCount: boolean }>`
+export const StyledFormTextArea = styled.div<{ $showCharactersCount: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -56,7 +56,7 @@ export const StyledFormTextArea = styled.div<{ showCharactersCount: boolean }>`
     align-self: flex-end;
     margin-top: 0.3em;
     opacity: 0.2;
-    visibility: ${({ showCharactersCount }) =>
-      showCharactersCount ? "show" : "hidden"};
+    visibility: ${({ $showCharactersCount }) =>
+      $showCharactersCount ? "show" : "hidden"};
   }
 `;

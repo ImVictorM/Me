@@ -6,21 +6,23 @@ import {
   StyledProjectCardWrapper,
   StyledProjectsList,
 } from "./styles";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   return (
     <Section title="SELECTED PROJECTS" id="projects">
       <StyledProjectsList>
-        {content.projects.map((project) => {
+        {content.projects.map((project, index) => {
           return (
-            <li key={project.githubUrl}>
-              <StyledProjectCardWrapper
-                href={project.pageUrl ? project.pageUrl : project.githubUrl}
-                target="_blank"
-              >
-                <div className="project-card-image">
+            <li key={index.toString() + project.githubUrl}>
+              <StyledProjectCardWrapper>
+                <Link
+                  to={project.pageUrl ? project.pageUrl : project.githubUrl}
+                  target="_blank"
+                  className="project-card-image"
+                >
                   <img src={project.img} alt={`${project.title}`} />
-                </div>
+                </Link>
 
                 <StyledProjectCardInfo>
                   <header className="project-header">
@@ -42,8 +44,8 @@ export default function Projects() {
 
                   <footer className="project-footer">
                     <ul>
-                      {project.mainTechs.map((tech) => (
-                        <li>{tech}</li>
+                      {project.mainTechs.map((tech, index) => (
+                        <li key={index.toString() + tech}>{tech}</li>
                       ))}
                     </ul>
                   </footer>

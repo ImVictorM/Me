@@ -2,8 +2,8 @@ import { device } from "@/styles/breakpoints";
 import styled, { css } from "styled-components";
 
 export const StyledHeader = styled.header<{
-  scrollDirection?: "up" | "down";
-  scrollY: number;
+  $scrollDirection?: "up" | "down";
+  $scrollY: number;
 }>`
   position: fixed;
   z-index: 9;
@@ -23,17 +23,17 @@ export const StyledHeader = styled.header<{
   background-color: rgba(20, 24, 19, 0.9);
   transition: var(--chiang-transition);
 
-  ${({ scrollDirection, scrollY }) =>
-    scrollDirection === "up" &&
-    scrollY !== 0 &&
+  ${({ $scrollDirection, $scrollY }) =>
+    $scrollDirection === "up" &&
+    $scrollY !== 0 &&
     css`
       height: var(--header-scroll-height);
       box-shadow: 0 15px 10px -10px var(--shadow-green-smooth);
     `}
 
-  ${({ scrollDirection }) =>
-    scrollDirection === "down" &&
-    scrollY !== 0 &&
+  ${({ $scrollDirection, $scrollY }) =>
+    $scrollDirection === "down" &&
+    $scrollY !== 0 &&
     css`
       height: var(--header-scroll-height);
       transform: translateY(calc(var(--header-scroll-height) * -1));

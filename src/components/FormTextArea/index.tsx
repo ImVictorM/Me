@@ -22,7 +22,9 @@ export default function FormTextArea({
   }, [defaultTextAreaProps.value]);
 
   return (
-    <StyledFormTextArea showCharactersCount={defaultTextAreaProps.value !== ""}>
+    <StyledFormTextArea
+      $showCharactersCount={defaultTextAreaProps.value !== ""}
+    >
       <label htmlFor={defaultTextAreaProps.id}>{label}</label>
       <textarea id={defaultTextAreaProps.id} {...defaultTextAreaProps} />
 

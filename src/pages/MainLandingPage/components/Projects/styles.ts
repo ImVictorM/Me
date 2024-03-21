@@ -12,7 +12,7 @@ export const StyledProjectsList = styled.ul`
   }
 `;
 
-export const StyledProjectCardWrapper = styled.a`
+export const StyledProjectCardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   background-color: ${({ theme }) => theme.colors.eerieBlack};

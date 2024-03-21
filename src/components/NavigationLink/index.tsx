@@ -25,7 +25,7 @@ export default function NavigationLink({
   }, [hash]);
 
   return (
-    <StyledNavigationLink href={to} isActive={isActive}>
+    <StyledNavigationLink href={to} $isActive={isActive}>
       <span>{text}</span>
     </StyledNavigationLink>
   );

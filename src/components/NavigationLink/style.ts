@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const StyledNavigationLink = styled.a<{ isActive: boolean }>`
+export const StyledNavigationLink = styled.a<{ $isActive: boolean }>`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.electricGreen};
   padding: 0 0.5em;
@@ -12,8 +12,8 @@ export const StyledNavigationLink = styled.a<{ isActive: boolean }>`
   justify-content: flex-end;
   padding-bottom: 0.4em;
 
-  ${({ isActive }) =>
-    isActive &&
+  ${({ $isActive }) =>
+    $isActive &&
     css`
       align-self: flex-end;
       padding: 0;
