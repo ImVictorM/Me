@@ -14,9 +14,9 @@ export default function About() {
         />
 
         <div className="about-content">
-          <h3>HELLO, I AM VICTOR!</h3>
+          <h3 className="title">HELLO, I AM VICTOR!</h3>
 
-          <p>{content.about}</p>
+          <p className="paragraph">{content.about}</p>
         </div>
       </StyledAboutInfo>
     </Section>

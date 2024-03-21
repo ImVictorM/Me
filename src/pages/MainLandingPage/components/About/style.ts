@@ -15,42 +15,12 @@ export const StyledAboutInfo = styled.div`
   }
 
   & .about-content {
-    h3 {
-      color: ${({ theme }) => theme.colors.electricGreen};
-      font-size: 4rem;
-    }
-
     p {
-      font-size: 2rem;
       white-space: pre-line;
-    }
-  }
-
-  @media ${device.lg} {
-    & .about-content {
-      h3 {
-        font-size: 2.5rem;
-      }
-
-      p {
-        font-size: 1.5rem;
-      }
     }
   }
 
   @media ${device.md} {
     display: block;
-  }
-
-  @media ${device.sm} {
-    & .about-content {
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
   }
 `;

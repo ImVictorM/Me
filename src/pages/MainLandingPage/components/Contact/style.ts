@@ -7,22 +7,12 @@ export const StyledContactPresentation = styled.div`
   align-items: center;
 
   h3 {
-    color: ${({ theme }) => theme.colors.electricGreen};
-    font-size: 3.5rem;
     margin-bottom: 0.5em;
-
-    @media ${device.sm} {
-      font-size: 2.5rem;
-    }
   }
 
   p {
-    font-size: 1.5rem;
-    line-height: 1.5;
+    line-height: 1.3;
     text-align: center;
-    @media ${device.sm} {
-      font-size: 1rem;
-    }
   }
 `;
 
@@ -34,8 +24,10 @@ export const StyledInputsWrapper = styled.div`
 
   .personal-info {
     display: flex;
-    flex-wrap: wrap;
     gap: 1em;
+    @media ${device.md} {
+      flex-wrap: wrap;
+    }
   }
 `;
 

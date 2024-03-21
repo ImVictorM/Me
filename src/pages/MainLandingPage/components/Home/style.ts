@@ -111,13 +111,8 @@ export const StyledHeroPresentation = styled.div`
 
 export const StyledHeroText = styled.p`
   width: 100%;
-  font-size: 1.5rem;
   margin-bottom: 1em;
-  max-width: 500px;
-
-  @media ${device.md} {
-    font-size: 1.2rem;
-  }
+  max-width: 550px;
 `;
 
 export const StyledSocialLinks = styled.div`
@@ -133,6 +128,10 @@ export const StyledSocialLinks = styled.div`
 
     @media ${device.md} {
       width: 32px;
+    }
+
+    @media ${device.sm} {
+      width: 24px;
     }
   }
 `;

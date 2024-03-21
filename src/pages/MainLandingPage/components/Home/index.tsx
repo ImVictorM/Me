@@ -29,7 +29,7 @@ export default function Home() {
           </div>
         </StyledHeroPresentation>
 
-        <StyledHeroText>{content.hero}</StyledHeroText>
+        <StyledHeroText className="paragraph">{content.hero}</StyledHeroText>
 
         <StyledSocialLinks>
           <a href={content.social.linkedin} target="_blank">

@@ -8,6 +8,7 @@ export const StyledSectionTitle = styled.h2`
   align-items: center;
   font-size: 2rem;
   gap: 0.4em;
+  white-space: nowrap;
 
   &::before,
   &::after {
@@ -22,7 +23,11 @@ export const StyledSectionTitle = styled.h2`
     }
   }
 
-  @media ${device.sm} {
+  @media ${device.md} {
     font-size: 1.5rem;
+  }
+
+  @media ${device.sm} {
+    font-size: 1rem;
   }
 `;

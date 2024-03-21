@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import fonts from "./font.module.css";
 import variables from "./variables";
+import { device } from "./breakpoints";
 
 export const GlobalStyles = createGlobalStyle`
  ${fonts}
@@ -88,6 +89,32 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+.title {
+  font-size: 4rem;
+  color: ${({ theme }) => theme.colors.electricGreen};
+
+  @media ${device.md} {
+    font-size: 3rem;
+  }
+
+  @media ${device.sm} {
+    font-size: 1.5rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.875rem;
+  color: ${({ theme }) => theme.colors.jetStream};
+
+  @media ${device.md} {
+    font-size: 1.375rem;
+  }
+
+  @media ${device.sm} {
+    font-size: 1rem;
+  }
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

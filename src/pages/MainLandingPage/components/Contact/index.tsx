@@ -29,9 +29,11 @@ export default function Contact() {
   return (
     <Section title="CONTACT">
       <StyledContactPresentation>
-        <h3>REACH ME OUT</h3>
-        <p>Got a question, proposal or just want to say hi?</p>
-        <p>Feel free!</p>
+        <h3 className="title">REACH ME OUT</h3>
+        <p className="paragraph">
+          Got a question, proposal or just want to say hi?
+        </p>
+        <p className="paragraph">Feel free!</p>
       </StyledContactPresentation>
 
       <StyledInputsWrapper>

@@ -8,7 +8,7 @@ export const StyledProjectsList = styled.ul`
   gap: 1em;
 
   @media ${device.md} {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 `;
 
@@ -33,6 +33,13 @@ export const StyledProjectCardWrapper = styled.a`
     min-height: 200px;
     width: 250px;
     height: 200px;
+
+    @media ${device.sm} {
+      min-width: 200px;
+      min-height: 150px;
+      width: 200px;
+      height: 150px;
+    }
 
     img {
       width: 100%;
@@ -99,12 +106,13 @@ export const StyledProjectCardInfo = styled.div`
     justify-content: space-between;
 
     .project-title {
-      font-size: 2rem;
+      text-transform: uppercase;
+      font-size: 1.5rem;
       font-weight: 500;
       color: ${({ theme }) => theme.colors.electricGreen};
 
       @media ${device.sm} {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
 
@@ -132,7 +140,7 @@ export const StyledProjectCardInfo = styled.div`
 
   .project-description {
     margin: 0.5em 0;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 
     @media ${device.sm} {
       font-size: 1rem;
@@ -147,6 +155,10 @@ export const StyledProjectCardInfo = styled.div`
       flex-direction: row;
       gap: 0.5em;
       opacity: 0.7;
+
+      @media ${device.sm} {
+        font-size: 0.75rem;
+      }
     }
   }
 `;

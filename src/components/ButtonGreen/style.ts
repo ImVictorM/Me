@@ -4,11 +4,15 @@ import styled from "styled-components";
 export const StyledGreenButton = styled.button`
   background-color: ${({ theme }) => theme.colors.electricGreen};
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.875rem;
   padding: 0.5em 1em;
   border-radius: 4px;
 
+  @media ${device.md} {
+    font-size: 1.375rem;
+  }
+
   @media ${device.sm} {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 `;

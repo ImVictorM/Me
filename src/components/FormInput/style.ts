@@ -8,17 +8,21 @@ export const StyledFormInput = styled.div`
   height: 100%;
 
   label {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 0.1em;
     opacity: 0.5;
 
-    @media ${device.sm} {
+    @media ${device.md} {
       font-size: 1rem;
+    }
+
+    @media ${device.sm} {
+      font-size: 0.75rem;
     }
   }
 
   input {
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
     height: 100%;
     text-align: start;
@@ -30,8 +34,12 @@ export const StyledFormInput = styled.div`
     transition: border 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     caret-color: ${({ theme }) => theme.colors.jetStream};
 
+    @media ${device.md} {
+      font-size: 1.25rem;
+    }
+
     @media ${device.sm} {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     &::placeholder {
