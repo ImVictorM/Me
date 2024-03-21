@@ -5,7 +5,7 @@ import { StyledAboutInfo } from "./style";
 
 export default function About() {
   return (
-    <Section title="ABOUT ME">
+    <Section title="ABOUT ME" id="about">
       <StyledAboutInfo>
         <img
           src={swiftLearner}

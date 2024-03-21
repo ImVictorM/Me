@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { content } from "@/utils";
-import { Link } from "react-router-dom";
 import { ResumeLink } from "@/components";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import {
@@ -37,9 +36,9 @@ export default function NavigationDrawer() {
           <StyledLinkList>
             {content.navigationLinks.map((link) => (
               <li key={link.url}>
-                <Link to={link.url} onClick={toggleMenu}>
+                <a href={link.url} onClick={toggleMenu}>
                   {link.name}
-                </Link>
+                </a>
               </li>
             ))}
           </StyledLinkList>

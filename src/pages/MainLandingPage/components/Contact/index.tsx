@@ -27,7 +27,7 @@ export default function Contact() {
   }
 
   return (
-    <Section title="CONTACT">
+    <Section title="CONTACT" id="contact">
       <StyledContactPresentation>
         <h3 className="title">REACH ME OUT</h3>
         <p className="paragraph">

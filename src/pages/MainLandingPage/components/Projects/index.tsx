@@ -9,7 +9,7 @@ import {
 
 export default function Projects() {
   return (
-    <Section title="SELECTED PROJECTS">
+    <Section title="SELECTED PROJECTS" id="projects">
       <StyledProjectsList>
         {content.projects.map((project) => {
           return (

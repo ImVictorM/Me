@@ -16,7 +16,7 @@ export default function Home() {
   const { width } = useWindowDimensions();
 
   return (
-    <StyledHomeContainer id="#home">
+    <StyledHomeContainer id="home">
       <StyledHero>
         <StyledHeroPresentation>
           <div>

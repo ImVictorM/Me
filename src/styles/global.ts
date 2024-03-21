@@ -68,7 +68,7 @@ li {
   list-style-type: none;
 }
 /* Set core root defaults */
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 /* A elements that don't have a class get default styles */
@@ -119,7 +119,7 @@ select {
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
+  html {
     scroll-behavior: auto;
   }
 
