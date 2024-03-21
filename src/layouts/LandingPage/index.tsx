@@ -19,7 +19,7 @@ const StyledLayout = styled.div`
 
 const StyledContainer = styled.div`
   display: flex;
-
+  position: relative;
   flex-direction: column;
   max-width: 1200px;
   margin: auto;
