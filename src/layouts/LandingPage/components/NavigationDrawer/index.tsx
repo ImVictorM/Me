@@ -27,11 +27,11 @@ export default function NavigationDrawer() {
   return (
     <HeaderWrapper>
       <StyledSevenIcon>7</StyledSevenIcon>
-      <StyledHamburgerButton onClick={toggleMenu} menuOpen={menuOpen}>
+      <StyledHamburgerButton onClick={toggleMenu} $menuOpen={menuOpen}>
         <div className="hamburger-bar" />
       </StyledHamburgerButton>
 
-      <StyledSidebar menuOpen={menuOpen}>
+      <StyledSidebar $menuOpen={menuOpen}>
         <StyledNavigation>
           <StyledLinkList>
             {content.navigationLinks.map((link) => (

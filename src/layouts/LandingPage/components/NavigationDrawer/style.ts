@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledHamburgerButton = styled.button<{ menuOpen: boolean }>`
+export const StyledHamburgerButton = styled.button<{ $menuOpen: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,11 +25,11 @@ export const StyledHamburgerButton = styled.button<{ menuOpen: boolean }>`
     background-color: ${({ theme }) => theme.colors.electricGreen};
     transition-duration: 0.22s;
     transition-property: transform;
-    transition-delay: ${({ menuOpen }) => (menuOpen ? `0.12s` : `0s`)};
-    transform: rotate(${({ menuOpen }) => (menuOpen ? `225deg` : `0deg`)});
+    transition-delay: ${({ $menuOpen }) => ($menuOpen ? `0.12s` : `0s`)};
+    transform: rotate(${({ $menuOpen }) => ($menuOpen ? `225deg` : `0deg`)});
     transition-timing-function: cubic-bezier(
-      ${({ menuOpen }) =>
-        menuOpen ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`}
+      ${({ $menuOpen }) =>
+        $menuOpen ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`}
     );
     &:before,
     &:after {
@@ -48,27 +48,27 @@ export const StyledHamburgerButton = styled.button<{ menuOpen: boolean }>`
     }
 
     &:before {
-      width: ${({ menuOpen }) => (menuOpen ? `100%` : `120%`)};
-      top: ${({ menuOpen }) => (menuOpen ? `0` : `-10px`)};
-      opacity: ${({ menuOpen }) => (menuOpen ? 0 : 1)};
-      transition: ${({ menuOpen }) =>
-        menuOpen
+      width: ${({ $menuOpen }) => ($menuOpen ? `100%` : `120%`)};
+      top: ${({ $menuOpen }) => ($menuOpen ? `0` : `-10px`)};
+      opacity: ${({ $menuOpen }) => ($menuOpen ? 0 : 1)};
+      transition: ${({ $menuOpen }) =>
+        $menuOpen
           ? "top 0.1s ease-out, opacity 0.1s ease-out 0.12s"
           : "top 0.1s ease-in 0.25s, opacity 0.1s ease-in"};
     }
     &:after {
-      width: ${({ menuOpen }) => (menuOpen ? `100%` : `80%`)};
-      bottom: ${({ menuOpen }) => (menuOpen ? `0` : `-10px`)};
-      transform: rotate(${({ menuOpen }) => (menuOpen ? `-90deg` : `0`)});
-      transition: ${({ menuOpen }) =>
-        menuOpen
+      width: ${({ $menuOpen }) => ($menuOpen ? `100%` : `80%`)};
+      bottom: ${({ $menuOpen }) => ($menuOpen ? `0` : `-10px`)};
+      transform: rotate(${({ $menuOpen }) => ($menuOpen ? `-90deg` : `0`)});
+      transition: ${({ $menuOpen }) =>
+        $menuOpen
           ? "bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s"
           : "bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)"};
     }
   }
 `;
 
-export const StyledSidebar = styled.aside<{ menuOpen: boolean }>`
+export const StyledSidebar = styled.aside<{ $menuOpen: boolean }>`
   display: flex;
   position: fixed;
   top: 0;
@@ -79,7 +79,7 @@ export const StyledSidebar = styled.aside<{ menuOpen: boolean }>`
   height: 100vh;
   background-color: #111f11;
   box-shadow: -10px 0px 30px -15px var(--shadow-green-smooth);
-  transform: translateX(${({ menuOpen }) => (menuOpen ? 0 : 100)}vw);
+  transform: translateX(${({ $menuOpen }) => ($menuOpen ? 0 : 100)}vw);
   transition: var(--chiang-transition);
 `;
 

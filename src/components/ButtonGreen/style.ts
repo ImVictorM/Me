@@ -7,6 +7,12 @@ export const StyledGreenButton = styled.button`
   font-size: 1.875rem;
   padding: 0.5em 1em;
   border-radius: 4px;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.chineseBlack};
+
+  &:disabled {
+    cursor: auto;
+  }
 
   @media ${device.md} {
     font-size: 1.375rem;
