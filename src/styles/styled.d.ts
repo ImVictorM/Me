@@ -8,6 +8,7 @@ declare module "styled-components" {
       jetStream: "#BFDABF";
       onyx: "#344038";
       eerieBlack: "#181E17";
+      alertRed: "#ab3131";
     };
     fonts: {
       monofonto: "monofonto";

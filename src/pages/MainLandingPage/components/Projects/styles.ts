@@ -75,7 +75,7 @@ export const StyledProjectCardWrapper = styled.div`
   &:hover,
   &:focus {
     transform: translateY(-0.4em);
-    box-shadow: 0 1px 0 0 ${({ theme }) => theme.colors.electricGreen};
+    box-shadow: 0 4px 0 0 ${({ theme }) => theme.colors.electricGreen};
 
     .project-card-image {
       img,

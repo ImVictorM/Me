@@ -1,18 +1,20 @@
-import { InputHTMLAttributes } from "react";
 import { StyledFormInput } from "./style";
 
-type FormInputProps = InputHTMLAttributes<HTMLInputElement> & {
+type FormInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label: string;
+  errors: string[];
 };
 
 export default function FormInput({
   label,
+  errors,
   ...defaultInputProps
 }: FormInputProps) {
   return (
-    <StyledFormInput>
+    <StyledFormInput $showError={errors.length !== 0}>
       <label htmlFor={defaultInputProps.id}>{label}</label>
       <input {...defaultInputProps} />
+      <span className="error">{errors[0]}</span>
     </StyledFormInput>
   );
 }

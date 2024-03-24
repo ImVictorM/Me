@@ -9,9 +9,12 @@ export const StyledGreenButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.chineseBlack};
+  transition: var(--chiang-transition);
 
   &:disabled {
     cursor: auto;
+    background-color: ${({ theme }) => theme.colors.electricGreen + "70"};
+    color: ${({ theme }) => theme.colors.chineseBlack + "70"};
   }
 
   @media ${device.md} {

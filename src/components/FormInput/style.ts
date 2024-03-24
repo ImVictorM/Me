@@ -1,7 +1,7 @@
 import { device } from "@/styles/breakpoints";
 import styled from "styled-components";
 
-export const StyledFormInput = styled.div`
+export const StyledFormInput = styled.div<{ $showError: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -30,7 +30,7 @@ export const StyledFormInput = styled.div`
     background-color: ${({ theme }) => theme.colors.eerieBlack};
     padding: 0.6em 0.4em;
     color: ${({ theme }) => theme.colors.jetStream};
-    border-bottom: 2px solid ${({ theme }) => theme.colors.electricGreen + "50"};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.electricGreen + "70"};
     transition: border 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     caret-color: ${({ theme }) => theme.colors.jetStream};
 
@@ -58,5 +58,10 @@ export const StyledFormInput = styled.div`
       -webkit-text-fill-color: ${({ theme }) => theme.colors.jetStream};
       caret-color: ${({ theme }) => theme.colors.jetStream};
     }
+  }
+
+  span {
+    margin-top: 0.3em;
+    visibility: ${({ $showError }) => ($showError ? "normal" : "hidden")};
   }
 `;

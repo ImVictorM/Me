@@ -3,10 +3,12 @@ import { StyledFormTextArea } from "./style";
 
 type FormTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
   label: string;
+  errors: string[];
 };
 
 export default function FormTextArea({
   label,
+  errors,
   ...defaultTextAreaProps
 }: FormTextAreaProps) {
   const [charactersCount, setCharactersCount] = useState(
@@ -24,13 +26,17 @@ export default function FormTextArea({
   return (
     <StyledFormTextArea
       $showCharactersCount={defaultTextAreaProps.value !== ""}
+      $showError={errors.length !== 0}
     >
       <label htmlFor={defaultTextAreaProps.id}>{label}</label>
       <textarea id={defaultTextAreaProps.id} {...defaultTextAreaProps} />
 
-      <span className="characters-count">
-        {charactersCount} characters left.
-      </span>
+      <div>
+        <span className="error error-message">{errors[0]}</span>
+        <span className="characters-count">
+          {charactersCount} characters left.
+        </span>
+      </div>
     </StyledFormTextArea>
   );
 }

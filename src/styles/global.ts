@@ -117,6 +117,12 @@ select {
   }
 }
 
+.error {
+  color: ${({ theme }) => theme.colors.alertRed};
+  font-size: smaller;
+  display: inline-block;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html {
