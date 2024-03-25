@@ -8,3 +8,5 @@ export { default as tfc } from "./tfc.png";
 export { default as trivia } from "./trivia.png";
 export { default as tryunfo } from "./tryunfo.png";
 export { default as vaultMeThumbsUp } from "./vault-me-thumbs-up.svg";
+export { default as vaultMeDeadGreen } from "./vault-me-dead-green.svg";
+export { default as vaultMeNeutral } from "./vault-me-neutral.svg";
