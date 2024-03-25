@@ -46,5 +46,10 @@ export const StyledHeader = styled.header<{
   @media ${device.sm} {
     justify-content: space-between;
     align-items: center;
+    padding: 0 1em;
+  }
+
+  @media ${device.xs} {
+    padding: 0 0.5em;
   }
 `;
