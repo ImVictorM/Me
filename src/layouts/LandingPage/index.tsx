@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { Footer, HorizontalMenu, NavigationDrawer } from "./components";
 import { useWindowDimensions } from "@/hooks";
 import { size } from "@/styles/breakpoints";
-import { StyledLandingPageLayout, StyledPageContainer } from "./style";
+import { StyledContentContainer, StyledLandingPageLayout } from "./style";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -12,19 +12,15 @@ type LayoutProps = {
 
 export default function LandingPage({ children }: LayoutProps) {
   const { width } = useWindowDimensions();
+
   return (
     <StyledLandingPageLayout>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <StyledPageContainer>
-          {width >= parseInt(size.sm) ? (
-            <HorizontalMenu />
-          ) : (
-            <NavigationDrawer />
-          )}
-          <div id="content">{children}</div>
-          <Footer />
-        </StyledPageContainer>
+
+        {width >= parseInt(size.sm) ? <HorizontalMenu /> : <NavigationDrawer />}
+        <StyledContentContainer id="content">{children}</StyledContentContainer>
+        <Footer />
       </ThemeProvider>
     </StyledLandingPageLayout>
   );

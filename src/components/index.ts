@@ -6,3 +6,4 @@ export { default as Section } from "./Section";
 export { default as FormInput } from "./FormInput";
 export { default as FormTextArea } from "./FormTextArea";
 export { default as ButtonGreen } from "./ButtonGreen";
+export { default as AnimatedContainer } from "./AnimatedContainer";

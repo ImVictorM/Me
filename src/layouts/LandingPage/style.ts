@@ -13,7 +13,7 @@ export const StyledLandingPageLayout = styled.div`
   }
 `;
 
-export const StyledPageContainer = styled.div`
+export const StyledContentContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;

@@ -1,4 +1,10 @@
-import { ButtonGreen, FormInput, FormTextArea, Section } from "@/components";
+import {
+  AnimatedContainer,
+  ButtonGreen,
+  FormInput,
+  FormTextArea,
+  Section,
+} from "@/components";
 import {
   StyledButtonWrapper,
   StyledContactPresentation,
@@ -152,80 +158,87 @@ export default function Contact() {
   }, [isFormBlank]);
 
   return (
-    <Section title="CONTACT" id="contact">
-      <StyledContactPresentation>
-        <h3 className="title">REACH ME OUT</h3>
-        <p className="paragraph">
-          Got a question, proposal or just want to say hi?
-        </p>
-        <p className="paragraph">Feel free!</p>
-      </StyledContactPresentation>
+    <AnimatedContainer
+      duration={0.7}
+      direction="down-up"
+      animationMode="linear"
+      movementScale="2%"
+    >
+      <Section title="CONTACT" id="contact">
+        <StyledContactPresentation>
+          <h3 className="title">REACH ME OUT</h3>
+          <p className="paragraph">
+            Got a question, proposal or just want to say hi?
+          </p>
+          <p className="paragraph">Feel free!</p>
+        </StyledContactPresentation>
 
-      <form ref={form} onSubmit={sendEmail}>
-        <StyledInputsWrapper>
-          <div className="personal-info">
-            <FormInput
-              name="sender_name"
-              type="text"
-              errors={formState.name.errors}
-              id="name"
-              label="YOUR NAME"
-              placeholder="Enter your name"
-              maxLength={60}
-              value={formState.name.value}
-              onChange={handleFormChange}
-            />
+        <form ref={form} onSubmit={sendEmail}>
+          <StyledInputsWrapper>
+            <div className="personal-info">
+              <FormInput
+                name="sender_name"
+                type="text"
+                errors={formState.name.errors}
+                id="name"
+                label="YOUR NAME"
+                placeholder="Enter your name"
+                maxLength={60}
+                value={formState.name.value}
+                onChange={handleFormChange}
+              />
 
-            <FormInput
-              type="email"
-              id="email"
-              name="sender_email"
-              errors={formState.email.errors}
-              label="EMAIL ADDRESS"
-              placeholder="Enter your email address"
-              maxLength={60}
-              value={formState.email.value}
-              onChange={handleFormChange}
-            />
-          </div>
-          <div>
-            <FormTextArea
-              id="message"
-              placeholder="Enter the message you want to send me!"
-              label="MESSAGE"
-              rows={5}
-              errors={formState.message.errors}
-              name="message"
-              maxLength={maxMessageLength}
-              value={formState.message.value}
-              onChange={handleFormChange}
-            />
-          </div>
-        </StyledInputsWrapper>
+              <FormInput
+                type="email"
+                id="email"
+                name="sender_email"
+                errors={formState.email.errors}
+                label="EMAIL ADDRESS"
+                placeholder="Enter your email address"
+                maxLength={60}
+                value={formState.email.value}
+                onChange={handleFormChange}
+              />
+            </div>
+            <div>
+              <FormTextArea
+                id="message"
+                placeholder="Enter the message you want to send me!"
+                label="MESSAGE"
+                rows={5}
+                errors={formState.message.errors}
+                name="message"
+                maxLength={maxMessageLength}
+                value={formState.message.value}
+                onChange={handleFormChange}
+              />
+            </div>
+          </StyledInputsWrapper>
 
-        <StyledButtonWrapper>
-          <ButtonGreen
-            type="submit"
-            disabled={isSending || isFormBlank || !isFormValid}
-          >
-            {isSending ? "SENDING EMAIL..." : "SEND EMAIL"}
-          </ButtonGreen>
-        </StyledButtonWrapper>
-      </form>
+          <StyledButtonWrapper>
+            <ButtonGreen
+              type="submit"
+              disabled={isSending || isFormBlank || !isFormValid}
+            >
+              {isSending ? "SENDING EMAIL..." : "SEND EMAIL"}
+            </ButtonGreen>
+          </StyledButtonWrapper>
+        </form>
 
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        transition={Bounce}
-      />
-    </Section>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition={Bounce}
+        />
+      </Section>
+    </AnimatedContainer>
   );
 }
