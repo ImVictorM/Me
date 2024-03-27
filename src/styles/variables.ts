@@ -11,10 +11,6 @@ const variables = css`
     --header-scroll-height: 70px;
 
     --shadow-green-smooth: #042901;
-
-    --toastify-color-error: ${({ theme }) => theme.colors.alertRed};
-    --toastify-color-dark: ${({ theme }) => theme.colors.chineseBlack};
-    --toastify-color-success: ${({ theme }) => theme.colors.electricGreen};
   }
 `;
 

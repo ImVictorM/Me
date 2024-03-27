@@ -9,11 +9,13 @@ import {
   StyledButtonWrapper,
   StyledContactPresentation,
   StyledInputsWrapper,
+  StyledToastContainer,
 } from "./style";
 import { useState, useRef, useMemo, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { environment } from "@/utils";
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+import { vaultMeDeadRed, vaultMeNeutral } from "@/assets/images";
 
 export interface FormField {
   value: string;
@@ -225,18 +227,14 @@ export default function Contact() {
           </StyledButtonWrapper>
         </form>
 
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-          transition={Bounce}
+        <StyledToastContainer
+          icon={({ type }) =>
+            type === "error" ? (
+              <img src={vaultMeDeadRed} />
+            ) : (
+              <img src={vaultMeNeutral} />
+            )
+          }
         />
       </Section>
     </AnimatedContainer>

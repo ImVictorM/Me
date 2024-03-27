@@ -1,4 +1,5 @@
 import { device } from "@/styles/breakpoints";
+import { Bounce, ToastContainer } from "react-toastify";
 import styled from "styled-components";
 
 export const StyledContactPresentation = styled.div`
@@ -37,5 +38,40 @@ export const StyledButtonWrapper = styled.div`
 
   @media ${device.sm} {
     width: 100%;
+  }
+`;
+
+export const StyledToastContainer = styled(ToastContainer).attrs({
+  position: "bottom-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  newestOnTop: true,
+  closeOnClick: true,
+  rtl: false,
+  pauseOnFocusLoss: true,
+  draggable: true,
+  pauseOnHover: true,
+  transition: Bounce,
+  toastClassName: "toast",
+})`
+  .toast {
+    background-color: ${({ theme }) => theme.colors.chineseBlack};
+    color: ${({ theme }) => theme.colors.jetStream};
+  }
+  /** handle the notification color and the text color based on the theme **/
+  .Toastify__toast-icon {
+    width: 40px;
+  }
+
+  .Toastify__progress-bar--error {
+    background-color: ${({ theme }) => theme.colors.alertRed};
+  }
+
+  .Toastify__progress-bar--success {
+    background-color: ${({ theme }) => theme.colors.electricGreen};
+  }
+
+  .Toastify__close-button {
+    color: white;
   }
 `;
