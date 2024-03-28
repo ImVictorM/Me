@@ -27,7 +27,7 @@ export default function Projects() {
                 duration={0.5}
                 direction="down-up"
                 movementScale="5%"
-                animationMode="both"
+                animationMode="linear"
               >
                 <StyledProjectCardWrapper>
                   <Link
