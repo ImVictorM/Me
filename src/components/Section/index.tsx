@@ -1,5 +1,5 @@
-import { AnimatedContainer, SectionTitle } from "@/components";
-import { StyledSection } from "./style";
+import { AnimatedContainer } from "@/components";
+import { StyledSection, StyledSectionTitle } from "./style";
 import useScrollToSectionRef from "@/hooks/useScrollToSectionRef";
 import React from "react";
 import { SlideAnimationParams } from "@/styles/animations";
@@ -24,10 +24,10 @@ export default function Section({
       <div ref={sectionRef} id={id}>
         {titleAnimation ? (
           <AnimatedContainer {...titleAnimation}>
-            <SectionTitle>{title}</SectionTitle>
+            <StyledSectionTitle>{title}</StyledSectionTitle>
           </AnimatedContainer>
         ) : (
-          <SectionTitle>{title}</SectionTitle>
+          <StyledSectionTitle>{title}</StyledSectionTitle>
         )}
         <div>{children}</div>
       </div>
