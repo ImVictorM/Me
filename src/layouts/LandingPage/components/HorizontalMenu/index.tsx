@@ -1,7 +1,8 @@
-import { NavigationLink, ResumeLink } from "@/components";
+import { NavigationLink, BoxLink } from "@/components";
 import { content } from "@/utils";
 import { HeaderWrapper } from "@/components";
 import { HeaderLine, StyledNav } from "./style";
+import { resume } from "@/assets/files";
 
 export default function HorizontalMenu() {
   return (
@@ -19,7 +20,7 @@ export default function HorizontalMenu() {
         ))}
 
         <div className="resume-link-wrapper">
-          <ResumeLink />
+          <BoxLink to={resume}>RESUME</BoxLink>
         </div>
       </StyledNav>
     </HeaderWrapper>

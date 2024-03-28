@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledResumeLink = styled.div`
+export const StyledBoxLink = styled.a`
   display: block;
   width: 100%;
   position: relative;
@@ -8,24 +8,19 @@ export const StyledResumeLink = styled.div`
   padding: 15px 20px;
   border: 2px solid ${({ theme }) => theme.colors.electricGreen};
   border-radius: 5px;
-  transition: all 0.5s;
+  transition: all 0.5s ease;
   background-color: inherit;
   text-align: center;
   cursor: pointer;
   height: fit-content;
-
-  a {
-    height: 100%;
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.electricGreen};
-    transition: font 0.1s;
-  }
+  color: ${({ theme }) => theme.colors.electricGreen};
+  text-decoration: none;
 
   &::before,
   &::after {
     content: "";
     display: block;
-    height: 30px;
+    height: 25px;
     position: absolute;
     width: 3px;
     top: 50%;
@@ -47,10 +42,7 @@ export const StyledResumeLink = styled.div`
   &:hover {
     background-color: ${({ theme }) => theme.colors.electricGreen};
     padding: 10px 20px;
-
-    a {
-      color: #002f00;
-    }
+    color: #002f00;
 
     &::before,
     &::after {

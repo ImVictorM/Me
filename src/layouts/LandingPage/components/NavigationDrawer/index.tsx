@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { content } from "@/utils";
-import { ResumeLink } from "@/components";
+import { BoxLink } from "@/components";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import {
   StyledHamburgerButton,
@@ -9,6 +9,7 @@ import {
   StyledSevenIcon,
   StyledSidebar,
 } from "./style";
+import { resume } from "@/assets/files";
 
 export default function NavigationDrawer() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,7 +44,7 @@ export default function NavigationDrawer() {
             ))}
           </StyledLinkList>
 
-          <ResumeLink />
+          <BoxLink to={resume}>RESUME</BoxLink>
         </StyledNavigation>
       </StyledSidebar>
     </HeaderWrapper>

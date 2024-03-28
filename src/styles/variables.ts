@@ -10,7 +10,7 @@ const variables = css`
     --header-height: 80px;
     --header-scroll-height: 70px;
 
-    --shadow-green-smooth: #042901;
+    --shadow-green-smooth: #04290280;
   }
 `;
 
