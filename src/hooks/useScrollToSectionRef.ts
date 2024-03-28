@@ -14,7 +14,7 @@ export default function useScrollToSectionRef(id: string) {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 }
     );
 
     if (sectionRef.current) {
