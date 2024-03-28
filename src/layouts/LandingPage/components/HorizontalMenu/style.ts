@@ -12,7 +12,7 @@ export const StyledNav = styled.nav`
   display: flex;
 
   & .resume-link-wrapper {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     background-color: ${({ theme }) => theme.colors.chineseBlack};
     margin-left: 1em;
     align-self: flex-end;
