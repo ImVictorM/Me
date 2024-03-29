@@ -92,6 +92,14 @@ export default function Contact() {
     setIsSending(true);
     event.preventDefault();
     if (!form.current) return;
+    if (
+      !environment.emailServiceId ||
+      !environment.emailTemplateId ||
+      !environment.emailUserId
+    ) {
+      toast.error("Sorry, but you are not allowed to use this feature.");
+      return;
+    }
 
     if (environment.isRunningOnProduction) {
       emailjs
@@ -107,9 +115,8 @@ export default function Contact() {
           () => {
             toast.success("Email sent!");
           },
-          (error) => {
+          () => {
             toast.error("Something went wrong.");
-            console.error("FAILED...", error.text);
           }
         );
     } else {
