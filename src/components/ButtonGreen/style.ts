@@ -1,3 +1,4 @@
+import { loadingDotAnimation } from "@/styles/animations";
 import { device } from "@/styles/breakpoints";
 import styled from "styled-components";
 
@@ -24,4 +25,24 @@ export const StyledGreenButton = styled.button`
   @media ${device.sm} {
     font-size: 1rem;
   }
+
+  .loading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .loading-text {
+      margin-right: 2px;
+    }
+  }
+`;
+
+export const LoadingDot = styled.span<{ animationDelay?: string }>`
+  display: inline-block;
+  width: 5px;
+  border-radius: 100%;
+  height: 5px;
+  margin: 0 1px;
+  background-color: ${({ theme }) => theme.colors.chineseBlack + "70"};
+  ${({ animationDelay }) => loadingDotAnimation(animationDelay)}
 `;
