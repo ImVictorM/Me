@@ -1,4 +1,4 @@
-# <img src="src/assets/images/vault-me-neutral.svg" width="40px" style="margin-left: auto;"> Me - Victor Mendes 
+# <img src="/src/assets/favicons/favicon.ico" width="36px" style="margin-left: auto;"> Me - Victor Mendes 
 
 ## 💡 Project Context
 
