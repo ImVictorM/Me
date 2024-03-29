@@ -11,3 +11,4 @@ export { default as vaultMeThumbsUp } from "./vault-me-thumbs-up.svg";
 export { default as vaultMeDeadGreen } from "./vault-me-dead-green.svg";
 export { default as vaultMeNeutral } from "./vault-me-neutral.svg";
 export { default as vaultMeDeadRed } from "./vault-me-dead-red.svg";
+export { default as projectDemo } from "./project-demo.png";

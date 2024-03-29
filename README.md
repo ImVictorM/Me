@@ -1,30 +1,68 @@
-# React + TypeScript + Vite
+<div style="display: flex; align-items: center;">
+  <h1 style="margin: 0; flex: 1;">Me - Victor Mendes</h1>
+  <img src="src/assets/images/vault-me-neutral.svg" width="50px" style="margin-left: auto;">
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Context 💡
 
-Currently, two official plugins are available:
+This is my personal portfolio, inspired by the Fallout [Pip-Boy](https://fallout.fandom.com/wiki/Pip-Boy) theme.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I also used these 2 amazing portfolios as inspiration, [Brittany Chiang's](https://github.com/bchiang7) portfolio [here](https://v4.brittanychiang.com/) and [Lars Olsom's](https://www.linkedin.com/in/larsui/) portfolio [here](https://www.lars-olson.com/).
 
-## Expanding the ESLint configuration
+<img src="src/assets/images/project-demo.png" alt="project demonstration" />
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Main technologies 🧰
 
-- Configure the top-level `parserOptions` property like this:
+<a href="https://styled-components.com/">
+  <img 
+    src="https://img.shields.io/badge/Styled%20Components-black?style=for-the-badge&logo=styledcomponents&logoColor=%23DB7093"
+    style="margin-bottom: 4px;"
+    height="30px"
+    alt="styled components badge"
+  />
+</a>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<a href="https://www.typescriptlang.org/">
+  <img 
+    src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" 
+    style="margin-bottom: 4px;" 
+    height="30px"
+    alt="typescript badge"
+  />
+</a>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<a href="https://reactjs.org/">
+  <img 
+    src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" 
+    style="margin-bottom: 4px;" 
+    height="30px"
+    alt="react badge"
+  />
+</a>
+
+<h2>Running the application 🛠</h2>
+
+1. Cloning and entering the repository
+
+   ```sh
+   git clone git@github.com:ImVictorM/Me.git && cd Me
+   ```
+
+2. Install dependencies
+
+   ```sh
+   npm install
+   ```
+
+3. Start the application
+  - To start in development mode:
+
+    ```sh
+    npm run dev
+    ```
+
+  - To start in production mode:
+
+    ```sh
+    npm run build && npm run preview
+    ```
