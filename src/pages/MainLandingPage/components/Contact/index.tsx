@@ -89,8 +89,8 @@ export default function Contact() {
   }, [formState]);
 
   function sendEmail(event: React.FormEvent) {
-    setIsSending(true);
     event.preventDefault();
+
     if (!form.current) return;
     if (
       !environment.emailServiceId ||
@@ -102,6 +102,8 @@ export default function Contact() {
     }
 
     if (environment.isRunningOnProduction) {
+      setIsSending(true);
+
       emailjs
         .sendForm(
           environment.emailServiceId,
@@ -118,12 +120,13 @@ export default function Contact() {
           () => {
             toast.error("Something went wrong.");
           }
-        );
+        )
+        .finally(() => {
+          setIsSending(false);
+        });
     } else {
       toast.error("Sorry, but you cannot send emails in this mode.");
     }
-
-    setIsSending(false);
   }
 
   function handleFormChange(
@@ -228,8 +231,10 @@ export default function Contact() {
             <ButtonGreen
               type="submit"
               disabled={isSending || isFormBlank || !isFormValid}
+              isLoading={isSending}
+              loadingText={"SENDING EMAIL"}
             >
-              {isSending ? "SENDING EMAIL..." : "SEND EMAIL"}
+              SEND EMAIL
             </ButtonGreen>
           </StyledButtonWrapper>
         </form>

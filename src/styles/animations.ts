@@ -99,3 +99,30 @@ export const slideAnimation = ({
     `;
   }
 };
+
+const loadingFrames = keyframes`
+  20%{
+    transform: translateY(0);
+  }
+  
+  30% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  70% {
+    transform: translateY(-2px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+`;
+
+export const loadingDotAnimation = (animationDelay?: string) => css`
+  animation: ${loadingFrames} 1s linear infinite;
+  animation-delay: ${animationDelay || "0s"};
+`;
