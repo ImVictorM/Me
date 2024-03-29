@@ -1,9 +1,6 @@
-<div style="display: flex; align-items: center;">
-  <h1 style="margin: 0; flex: 1;">Me - Victor Mendes</h1>
-  <img src="src/assets/images/vault-me-neutral.svg" width="50px" style="margin-left: auto;">
-</div>
+# <img src="src/assets/images/vault-me-neutral.svg" width="40px" style="margin-left: auto;"> Me - Victor Mendes 
 
-## Project Context 💡
+## 💡 Project Context
 
 This is my personal portfolio, inspired by the Fallout [Pip-Boy](https://fallout.fandom.com/wiki/Pip-Boy) theme.
 
@@ -11,7 +8,7 @@ I also used these 2 amazing portfolios as inspiration, [Brittany Chiang's](https
 
 <img src="src/assets/images/project-demo.png" alt="project demonstration" />
 
-## Main technologies 🧰
+## 🧰 Main technologies
 
 <a href="https://styled-components.com/">
   <img 
@@ -40,7 +37,7 @@ I also used these 2 amazing portfolios as inspiration, [Brittany Chiang's](https
   />
 </a>
 
-<h2>Running the application 🛠</h2>
+## 🛠 Running the application
 
 1. Cloning and entering the repository
 
